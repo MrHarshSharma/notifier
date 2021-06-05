@@ -1,30 +1,5 @@
 <?php
 
-function check_user_name($user_id){
-
-	if(!empty($user_id)){
-		if(strlen($user_id) > 3 && strlen($user_id) <= 50){
-			if(!preg_match('^[_a-z0-9-]+(\.[_a-z0-9-]+)@[a-z0-9-]+(\.[a-z0-9-]+)(\.[a-z]{2,3})^',$user_id)){
-				$user_id=1;
-				return $user_id;
-			}
-			else {
-				$ermsg = "Username Can Contain Alphabets And Digits";
-				
-			}
-		}
-		else {
-			$ermsg = "Username must be between 3 to 50 chars long.";
-			
-		}
-	}
-	else {
-		$ermsg = "Username Can Not Be Blank.";
-		
-	}
-}
-
-
 function check_username($name){
 	if(!empty($name)){
 		if(strlen($name) > 3 && strlen($name) <= 75){
